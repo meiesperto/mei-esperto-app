@@ -361,7 +361,7 @@
           <input type="text" id="profileName" placeholder="Como você se chama?" style="font-size:14px; padding:8px 10px;">
         </div>
       </div>
-      <div id="avatarPicker" hidden style="display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; padding-top:12px; border-top:1px solid var(--border-soft);"></div>
+              <div id="avatarPicker" hidden style="display:none; flex-wrap:wrap; gap:6px; margin-top:12px; padding-top:12px; border-top:1px solid var(--border-soft);"></div>
     </div>
 
     <div class="hero-tile">
@@ -794,29 +794,32 @@
     }
   }
 
-  function renderAvatarPicker(){
-    var picker = $("avatarPicker");
-    if(!picker.childElementCount){
-      AVATAR_EMOJIS.forEach(function(emo){
-        var b = document.createElement("button");
-        b.type = "button";
-        b.textContent = emo;
-        b.style.cssText = "width:34px;height:34px;border-radius:8px;border:1px solid var(--border);background:var(--surface-2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;";
-        b.addEventListener("click", function(){
-          state.perfil.avatar = emo;
-          saveState();
-          renderProfile();
-          picker.hidden = true;
-        });
-        picker.appendChild(b);
-      });
+    function renderAvatarPicker(){
+          var picker = $("avatarPicker");
+          if(!picker.childElementCount){
+                  AVATAR_EMOJIS.forEach(function(emo){
+                            var b = document.createElement("button");
+                            b.type = "button";
+                            b.textContent = emo;
+                            b.style.cssText = "width:34px;height:34px;border-radius:8px;border:1px solid var(--border);background:var(--surface-2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;";
+                            b.addEventListener("click", function(){
+                                        state.perfil.avatar = emo;
+                                        saveState();
+                                        renderProfile();
+                                        picker.hidden = true;
+                                        picker.style.display = "none";
+                            });
+                            picker.appendChild(b);
+                  });
+          }
     }
-  }
-  renderAvatarPicker();
-  $("profileAvatar").addEventListener("click", function(){
-    var picker = $("avatarPicker");
-    picker.hidden = !picker.hidden;
-  });
+    renderAvatarPicker();
+    $("profileAvatar").addEventListener("click", function(){
+          var picker = $("avatarPicker");
+          var willShow = picker.hidden;
+          picker.hidden = !willShow;
+          picker.style.display = willShow ? "flex" : "none";
+    });
 
   function renderInicio(){
     renderProfile();
