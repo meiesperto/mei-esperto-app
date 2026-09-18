@@ -84,51 +84,51 @@
     .error-msg{ font-size:12.5px; color:var(--danger); margin-top:6px; min-height:16px; }
   </style>
 
-<div class="app">
-    <div class="brand">MEI <em>Esperto</em></div>div>
-  <div class="sub">Calculadora de Preço — grátis por 7 dias</div>div>
+  <div class="app">
+    <div class="brand">MEI <em>Esperto</em></div>
+  <div class="sub">Calculadora de Preço — grátis por 7 dias</div>
 
   <section class="view active" id="viewGate">
       <div class="card">
-            <div class="card-label">Comece agora</div>div>
-            <p style="margin:0 0 16px; font-size:13.5px; color:var(--text-dim); line-height:1.5;">Digite seu e-mail pra liberar a calculadora. Você tem 7 dias grátis pra usar quantas vezes quiser.</p>p>
+            <div class="card-label">Comece agora</div>
+            <p style="margin:0 0 16px; font-size:13.5px; color:var(--text-dim); line-height:1.5;">Digite seu e-mail pra liberar a calculadora. Você tem 7 dias grátis pra usar quantas vezes quiser.</p>
             <div class="field">
                     <label>Seu e-mail</label>
                     <input type="email" id="gateEmail" placeholder="voce@email.com" autocomplete="email">
-            </div>div>
-            <div class="error-msg" id="gateError"></div>div>
-            <button class="btn btn-primary" id="gateBtn" style="margin-top:6px;">Liberar calculadora</button>button>
-      </div>div>
-  </section>section>
+            </div>
+            <div class="error-msg" id="gateError"></div>
+            <button class="btn btn-primary" id="gateBtn" style="margin-top:6px;">Liberar calculadora</button>
+      </div>
+  </section>
 
   <section class="view" id="viewCalc">
       <div class="card" id="trialBanner" style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px;">
-            <span style="font-size:12.5px; color:var(--text-dim);">Dias restantes do teste grátis</span>span>
-            <span style="font-weight:700; color:var(--brass);" id="daysLeftLabel">—</span>span>
-      </div>div>
+            <span style="font-size:12.5px; color:var(--text-dim);">Dias restantes do teste grátis</span>
+            <span style="font-weight:700; color:var(--brass);" id="daysLeftLabel">—</span>
+      </div>
   
       <div class="card">
-            <div class="card-label">Custos fixos do negócio (por mês)</div>div>
-            <div class="field input-money"><label>Aluguel / espaço de trabalho</label><input type="number" inputmode="decimal" id="cf_aluguel" placeholder="0,00"></div>div>
-            <div class="field input-money"><label>Internet e telefone</label><input type="number" inputmode="decimal" id="cf_internet" placeholder="0,00"></div>div>
-            <div class="field input-money"><label>Ferramentas / softwares</label><input type="number" inputmode="decimal" id="cf_ferramentas" placeholder="0,00"></div>div>
-            <div class="field input-money"><label>Transporte</label><input type="number" inputmode="decimal" id="cf_transporte" placeholder="0,00"></div>div>
-            <div class="row-item" style="margin-top:4px;"><span class="r-label">Total de custos fixos</span>span><span class="r-value" id="cf_total">R$ 0,00</span>span></div>div>
-      </div>div>
+            <div class="card-label">Custos fixos do negócio (por mês)</div>
+            <div class="field input-money"><label>Aluguel / espaço de trabalho</label><input type="number" inputmode="decimal" id="cf_aluguel" placeholder="0,00"></div>
+            <div class="field input-money"><label>Internet e telefone</label><input type="number" inputmode="decimal" id="cf_internet" placeholder="0,00"></div>
+            <div class="field input-money"><label>Ferramentas / softwares</label><input type="number" inputmode="decimal" id="cf_ferramentas" placeholder="0,00"></div>
+            <div class="field input-money"><label>Transporte</label><input type="number" inputmode="decimal" id="cf_transporte" placeholder="0,00"></div>
+            <div class="row-item" style="margin-top:4px;"><span class="r-label">Total de custos fixos</span><span class="r-value" id="cf_total">R$ 0,00</span></div>
+      </div>
   
       <div class="card">
-            <div class="card-label">Quanto você quer ganhar</div>div>
+            <div class="card-label">Quanto você quer ganhar</div>
             <div class="field-row">
-                    <div class="field input-money"><label>Ganho desejado / mês</label><input type="number" inputmode="decimal" id="cf_ganho" placeholder="0,00"></div>div>
-                    <div class="field"><label>Horas trabalhadas / mês</label><input type="number" inputmode="decimal" id="cf_horas" placeholder="0"></div>div>
-            </div>div>
-      </div>div>
+                    <div class="field input-money"><label>Ganho desejado / mês</label><input type="number" inputmode="decimal" id="cf_ganho" placeholder="0,00"></div>
+                    <div class="field"><label>Horas trabalhadas / mês</label><input type="number" inputmode="decimal" id="cf_horas" placeholder="0"></div>
+            </div>
+      </div>
   
       <div class="hero-tile">
-            <div class="card-label">Seu preço mínimo por hora</div>div>
-            <div class="num-display" id="calc_precoHora">R$ 0,00</div>div>
-            <div class="hero-note">(custos fixos + ganho desejado) ÷ horas trabalhadas</div>div>
-      </div>div>
+            <div class="card-label">Seu preço mínimo por hora</div>
+            <div class="num-display" id="calc_precoHora">R$ 0,00</div>
+            <div class="hero-note">(custos fixos + ganho desejado) ÷ horas trabalhadas</div>
+      </div>
   
       <div class="tip-card" style="margin-top:16px;">
             <div>
@@ -136,17 +136,17 @@
                       <div class="t2">O app completo tem Controle Financeiro (PJ x PF), Reserva de Emergência e Histórico Mensal — por R$17,90.</div>
             </div>
       </div>
-  </section>section>
+  </section>
 
     <section class="view" id="viewLocked">
           <div class="locked">
                   <div class="t1">Seu período grátis acabou</div>
                   <div class="t2">Seus 7 dias de teste da calculadora chegaram ao fim. Pra continuar calculando seu preço certo e ter acesso ao app completo (Controle Financeiro, Reserva de Emergência, Histórico Mensal), garanta o acesso por R$17,90.</div>
                   <a href="https://pay.kiwify.com.br/A8L48OH" style="text-decoration:none;">
-                            <button class="btn btn-primary">Quero o app completo</button>button>
-                  </a>a>
+                            <button class="btn btn-primary">Quero o app completo</button>
+                  </a>
           </div>
-    </section>section>
+    </section>
 
     <div class="footer-note">MEI Esperto · @meiesperto — uso pessoal, não redistribuir</div>
 </div>
@@ -258,7 +258,3 @@
       })();
   })();
 </script>
-
-</script>
-            </div></label></label></em>
-</style></title>
